@@ -1,0 +1,6 @@
+[submodule "spotipy"]
+	path = spotipy
+	url = https://github.com/jgansl/spotipy
+[submodule "supabase-py"]
+	path = supabase-py
+	url = https://github.com/jgansl/supabase-py
