@@ -9,7 +9,9 @@
 <body>
    <button id="togglePlay"> Play/Pause</button>
    <script src="https://sdk.scdn.co/spotify-player.js"></script>
-   <script>
+   <script
+   >
+      //https://developer.spotify.com/documentation/web-playback-sdk/reference/#api-spotify-player-getcurrentstate
       let access_token = 'BQAaM5wWIIS-tfnAMTvEBVYNX6psjH8CqR7wfIoLQHtwxfVaBZmX0r2Ki85CFgI87xigbxxm_ue-AC9i9WXk9n-_b0j4wNCn0lxnvj8BrOcdReIZ9Ej8o96-3Ssaf7HnQv-S_2C0z1GkASXY0HNkbo-oeTWBh_AdJSypdChHjhSLWHnLddtVFUFfvEjdyyfZMfZ-ThB5iJEd9txFH1sINjk'
       window.onSpotifyWebPlaybackSDKReady = () => {
          const token = access_token;//'BQA6uj3Ut3jBfVKHqx0x5tHCJInnqkYBs4NtoDQIRfJiWA05XeCAVI-hhX0Ay9EY2mpAQHIJrj-rPfscoNx4KVhBG4aMmGrsnmuTrtH16ux-EjrtEGBFdtHblMxtFdV13-jXsqSlqFMEc-ObNUo6_Yua9a8PU861x8EblP4fRIh_Cq9CxE0qGDUyP7HPeTTadyEEOWgprJFR56yP3YC2wvCbrnqETc2eiREg4SIiEzq69s_bPhRjejmJTrA68zfXOVVm5qvhYXzdz-3A0vd0IPWqZQPKZe7WttjUr0OaBU0LuXzRnO7i5IrkoGSdT90-rZCAHsDNHyGKuB9UOlvf';

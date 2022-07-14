@@ -12,21 +12,26 @@ lst = mem.get_track_ids(p)
 seek = True
 # lk = {}
 count = 0
+mem.move(p['id'], None, mem.sids)
 while 1:
    res = sp.currently_playing()
    prog = res['progress_ms']
    t = res['item']
    sid = t['id']
    if seek and not count%3:
-      sp.seek_track(prog + 10000)
+      sp.seek_track(prog + 20000)
    count += 1
-   # print(count)
-   if count == 10:
-      sp.next_track()
+   print(count)
+   # try:
+   #    if count == 15:
+   #       sp.next_track()
+   # except spotipy.exceptions.SpotifyException:
+   #    pass
    if last != sid:
       count = 0
       future = e.submit(sp.artists, [a['id'] for a in t['artists']])
       os.system('clear')
+      
       if last in lst:
          mem.move(p['id'], None, [last])
          # print('Removed')
@@ -35,7 +40,7 @@ while 1:
       genres = list(set(_.flatten([a['genres'] for a in artists])))
       print(genres)
       last = sid
-   sleep(3)
+   sleep(2)
 
 def try_this():
    # sp.recommendation
